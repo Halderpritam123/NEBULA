@@ -179,6 +179,46 @@ Create an Entity Relationship (ER) diagram to visualize the relationship between
            
 
 Api planning
+### API Endpoints
+
+| #   | Functionality                                    | HTTP Method | Route                                 | Description                                                                                                        |
+| --- | ------------------------------------------------ | ----------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| 1   | Authentication and User Management              | POST        | /api/signup                           | Create a new user account.                                                                                         |
+|     |                                                  | POST        | /api/login                            | Authenticate a user and generate an access token.                                                                   |
+|     |                                                  | GET         | /api/user/profile                    | Fetch the user's profile information.                                                                              |
+|     |                                                  | PUT         | /api/user/profile                    | Update the user's profile information.                                                                              |
+| 2   | Property Listing                                 | POST        | /api/property                         | Create a new property listing.                                                                                      |
+|     |                                                  | GET         | /api/property/:propertyId             | Get detailed information about a specific property.                                                                 |
+|     |                                                  | GET         | /api/properties                       | Fetch a list of properties based on search criteria and filters.                                                   |
+|     |                                                  | PUT         | /api/property/:propertyId             | Update the information of a property.                                                                               |
+|     |                                                  | DELETE      | /api/property/:propertyId             | Delete a property listing.                                                                                          |
+|     | a. Search Properties by Location, Dates, Filters | GET         | /api/properties/search                | Allows users to search for available properties based on various criteria and filters.                             |
+|     | b. Sort Properties by Price, Ratings, Criteria   | GET         | /api/properties/sort                  | Enables users to sort properties based on price, ratings, or other criteria.                                        |
+|     | c. Get Bookings by User and Property             | GET         | /api/bookings/user/:userId            | Fetch all bookings made by a specific user.                                                                         |
+|     |                                                  | GET         | /api/bookings/property/:propertyId    | Fetch all bookings for a specific property.                                                                         |
+|     | d. Filter Bookings by Dates and Status           | GET         | /api/bookings/filter                  | Allows users to filter their bookings based on check-in/out dates and booking status.                              |
+|     | e. Get Reviews by Property                       | GET         | /api/reviews/property/:propertyId     | Fetch all reviews for a specific property.                                                                          |
+|     | f. Sort Reviews by Ratings or Date               | GET         | /api/reviews/sort                     | Enables users to sort reviews based on ratings or the date they were submitted.                                    |
+| 3   | Booking and Reservations                         | POST        | /api/booking/:propertyId              | Create a new booking for a specific property.                                                                       |
+|     |                                                  | GET         | /api/booking/:bookingId               | Get details about a specific booking.                                                                               |
+|     |                                                  | GET         | /api/bookings/user                    | Fetch all bookings made by the currently logged-in user.                                                            |
+|     |                                                  | GET         | /api/bookings/host                    | Fetch all bookings for properties hosted by the currently logged-in host.                                           |
+|     |                                                  | PUT         | /api/booking/:bookingId               | Update booking details (e.g., check-in/out dates).                                                                  |
+|     |                                                  | DELETE      | /api/booking/:bookingId               | Cancel a booking.                                                                                                   |
+| 4   | Reviews and Ratings                              | POST        | /api/review/:propertyId               | Create a new review for a specific property.                                                                        |
+|     |                                                  | GET         | /api/review/:reviewId                 | Get details about a specific review.                                                                                |
+|     |                                                  | GET         | /api/reviews/property/:propertyId     | Fetch all reviews for a specific property.                                                                          |
+| 5   | Messaging System                                 | POST        | /api/message/:receiverId              | Send a new message to a specific user (receiver).                                                                   |
+|     |                                                  | GET         | /api/messages/:userId                 | Fetch all messages for the currently logged-in user.                                                                |
+|     |                                                  | GET         | /api/messages/:userId/:otherUserId    | Fetch all messages exchanged between two users.                                                                     |
+| 6   | Admin Panel (Administrator Access Only)          | GET         | /api/admin/users                      | Fetch a list of all users.                                                                                         |
+|     |                                                  | GET         | /api/admin/properties                 | Fetch a list of all property listings.                                                                              |
+|     |                                                  | GET         | /api/admin/bookings                   | Fetch a list of all bookings.                                                                                       |
+|     |                                                  | PUT         | /api/admin/user/:userId               | Update user information or privileges (e.g., host verification).                                                    |
+|     |                                                  | DELETE      | /api/admin/user/:userId               | Delete a user account (if necessary).                                                                               |
+|     |                                                  | DELETE      | /api/admin/property/:propertyId       | Delete a property listing (if necessary).                                                                           |
+| 7   | Additional Pages                                | -           | -                                    | These pages may contain static content displayed directly on the frontend and might not require specific routes.   |
+
 
 
 
