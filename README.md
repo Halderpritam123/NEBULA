@@ -144,7 +144,7 @@ Create an Entity Relationship (ER) diagram to visualize the relationship between
    - The association between the User and Message entities will be represented by an associative entity.
 
 
-
+```
                                                      +--------------+
                                                |   Homepage   |
                                                      +--------------+
@@ -177,7 +177,7 @@ Create an Entity Relationship (ER) diagram to visualize the relationship between
                 |  System     |
                 +-------------+
            
-
+```
 Api planning
 ### API Endpoints
 
