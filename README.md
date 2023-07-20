@@ -145,37 +145,37 @@ Create an Entity Relationship (ER) diagram to visualize the relationship between
 
 
 ```
-                                                     +--------------+
-                                               |   Homepage   |
-                                                     +--------------+
+                                             +--------------+
+                                             |  Homepage   |
+                                            +--------------+
                                                     |
                                                     v
-+---------------------+                                         +-------------------+
-| Search Results Page+Filter | <-----> | Property Listing  +map
-+---------------------+                     /                       +-------------------+
-                                             /
-                                          v
-                                  +---------+
-                                 | Booking |Product     —------->         +-------------------+
-                                   +---------+                                | Filtering & Map   |
-                                   /                                                    +-------------------+
-                                 /
-                               v
-                       +------------------+
-                       | User Profile     |
-                       |    Page          |
-                       +------------------+
-                          |
-                          v
-                  +---------------+
-                  | Host Dashboard|
-                  +---------------+
-                      |
-                      v
-                +-------------+
-                | Messaging   |
-                |  System     |
-                +-------------+
+                           +---------------------+                +-------------------+
+                      | Search Results Page+Filter | <-----> | Property Listing  +map
+                            +---------------------+               +-------------------+
+                                                         |
+                                                         v
+                                                    +---------+
+                                                   | Booking |Product           —------->           +-------------------+
+                                                     +---------+                                   | Filtering & Map   |
+                                                                                                     +-------------------+
+                                                              |
+                                                              v
+                                                  +------------------+
+                                                     | User Profile     |
+                                                       |    Page          |
+                                                     +------------------+
+                                                              |
+                                                              v
+                                                         +---------------+
+                                                            | Host Dashboard|
+                                                            +---------------+
+                                                                   |
+                                                                   v
+                                                          +-------------+
+                                                          | Messaging   |
+                                                          |  System     |
+                                                             +-------------+
            
 ```
 Api planning
